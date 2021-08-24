@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="32dp"
+    android:gravity="center">
+
+    <ImageButton
+        android:id="@+id/hourTimeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/hour_input"
+        android:layout_alignRight="@id/hour_input"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/ic_time_up" />
+
+    <ImageButton
+        android:id="@+id/minuteTimeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_time_up"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/minute_input"
+        android:layout_alignRight="@id/minute_input"/>
+
+    <ImageButton
+        android:id="@+id/secondTimeUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_time_up"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/second_input"
+        android:layout_alignRight="@id/second_input"/>
+
+    <EditText
+        android:id="@+id/hour_input"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hourTimeUp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="00" />
+
+    <EditText
+        android:id="@+id/minute_input"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/minuteTimeUp"
+        android:layout_toRightOf="@id/hour_input"
+        android:ems="10"
+        android:inputType="number"
+        android:text="00" />
+
+    <EditText
+        android:id="@+id/second_input"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/secondTimeUp"
+        android:layout_toRightOf="@id/minute_input"
+        android:ems="10"
+        android:inputType="number"
+        android:text="00" />
+
+
+
+    <ImageButton
+        android:id="@+id/hourTimeDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_time_down"
+        android:layout_below="@+id/hour_input"
+        android:layout_alignLeft="@+id/hour_input"
+        android:layout_alignRight="@id/hour_input"/>
+
+    <ImageButton
+        android:id="@+id/minuteTimeDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_time_down"
+        android:layout_below="@+id/minute_input"
+        android:layout_alignLeft="@+id/minute_input"
+        android:layout_alignRight="@id/minute_input"/>
+
+    <ImageButton
+        android:id="@+id/secondTimeDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_time_down"
+        android:layout_below="@+id/second_input"
+        android:layout_alignLeft="@+id/second_input"
+        android:layout_alignRight="@id/second_input"/>
+
+</RelativeLayout>
