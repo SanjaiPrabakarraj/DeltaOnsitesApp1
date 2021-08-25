@@ -6,14 +6,15 @@ import com.example.countdowntimer.MainActivity
 
 class PrefUtil {
     companion object{
-        private const val TIMER_LENGTH_MINUTES_ID = "timer_length"
-        fun getTimerLength(context: Context):Int{
+
+        private const val TIMER_LENGTH_SECONDS_ID = "timer_length"
+        fun getTimerLength(context: Context):Long{
             val preferences = PreferenceManager.getDefaultSharedPreferences(context)
-            return preferences.getInt(TIMER_LENGTH_MINUTES_ID, 10)
+            return preferences.getLong(TIMER_LENGTH_SECONDS_ID, 300)
         }
         fun setTimerLength(minutes:Long, context: Context){
             val editor = PreferenceManager.getDefaultSharedPreferences(context).edit()
-            editor.putLong(TIMER_LENGTH_MINUTES_ID, minutes)
+            editor.putLong(TIMER_LENGTH_SECONDS_ID, minutes)
             editor.apply()
         }
         
